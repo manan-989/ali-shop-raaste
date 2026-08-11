@@ -1,0 +1,112 @@
+{
+  "_parhne_wale_ke_liye": [
+    "Ali Mobile Shop Toolkit — raaston ki file.",
+    "",
+    "YE ASAL COPY HAI. App ise yahan se NAHI parhti — app GitHub par rakhi",
+    "copy parhti hai, din mein aik dafa:",
+    "  https://raw.githubusercontent.com/manan-989/ali-shop-raaste/main/raaste.json",
+    "",
+    "Yani tarteeb ye hai: yahan badlein -> GitHub par upload karein -> har",
+    "customer ki app agle din khud utaar legi. Nayi exe banane ki zarurat",
+    "NAHI. Jaldi chahiye to app ke 'Raaste' safhe par 'Abhi dekho' dabayein.",
+    "",
+    "App teen jagah dekhti hai, isi tarteeb mein:",
+    "  1. GitHub wali file (sab se nayi)",
+    "  2. pichhli dafa utri hui copy (internet band ho to)",
+    "  3. exe ke andar likhe purane pate (ye kabhi khali nahi hote)",
+    "",
+    "Ehtiyat: ye JSON hai. Har line ke aakhir mein comma hota hai, siwaye",
+    "aakhri line ke. Agar comma ghalat hua to app is file ko chhor kar",
+    "apne andar wale purane pate par chali jayegi — kuch tootega nahi.",
+    "",
+    "Jo khane app abhi parhti hai, sirf wo ye hain:",
+    "  version, updated,",
+    "  moviebox: apiHosts, siteHosts, bffPath, pagePath,",
+    "            endpoints.search, endpoints.download, headers.x-request-lang,",
+    "  quality:  poochhne_ki_hadd_mb",
+    "Baqi sab likhai samajhne ke liye hai — app unhein chhorh deti hai."
+  ],
+
+  "version": 2,
+  "updated": "2026-08-10",
+
+  "moviebox": {
+    "_note": "Pehla pata jo chale, wohi le liya jayega. Naya pata SAB SE UPAR likhein.",
+
+    "apiHosts": [
+      "h5-api.aoneroom.com"
+    ],
+
+    "bffPath": "/wefeed-h5api-bff",
+
+    "endpoints": {
+      "search": "/subject/search",
+      "suggest": "/subject/search-suggest",
+      "download": "/subject/download",
+      "play": "/subject/play"
+    },
+
+    "_endpoints_note": [
+      "'search' POST hai aur sirf mehmaan parche (JWT) se chalti hai.",
+      "'download' GET hai — asli link isi se milta hai.",
+      "Purani '/subject/detail' ab band ho chuki hai (404 aata hai). Season",
+      "ki tafseel ab detail page ke andar se nikalti hai — neeche dekhein."
+    ],
+
+    "headers": {
+      "x-request-lang": "en"
+    },
+
+    "siteHosts": [
+      "moviebox.ph"
+    ],
+
+    "_siteHosts_note": "Title ka apna page aur link maangne wali call — dono isi pate par.",
+
+    "pagePath": "/movies/{detailPath}",
+
+    "_pagePath_note": [
+      "SAB SE AHEM LINE. Har title — movie ho ya drama — isi '/movies/' raste",
+      "par milta hai ('/tv/' aur '/detail/' par 404 hai).",
+      "",
+      "Ye pata do kaam karta hai:",
+      "  1. Season aur episode ki list isi page ke andar milti hai.",
+      "  2. Link maangte waqt 'Referer' mein YEHI pata jata hai.",
+      "",
+      "Agar Referer mein sirf 'moviebox.ph/' bhej dein to site kehti hai",
+      "'koi file nahi' — halanke file mojood hoti hai. Ye ghalti pakarne",
+      "mein bohat waqt laga tha, is liye yahan likh di gayi hai."
+    ],
+
+    "seasonSource": "page",
+
+    "_seasonSource_note": [
+      "Season ki list kisi API se nahi aati. Detail page ke andar",
+      "'__NUXT_DATA__' wala dabba hota hai, us mein ye shakal hai:",
+      "  resource -> seasons[] -> { se, maxEp, resolutions[{ resolution }] }",
+      "Us dabbe mein har qeemat aik doosre ka pata (index) de kar juri hoti hai."
+    ]
+  },
+
+  "quality": {
+    "_note": "Dukaandaar jo quality chunta hai wo 'chaha hua' hai. Agar kisi episode par wo mojood na ho to ye seerhi chalti hai.",
+
+    "seerhi": "pehle-wohi_phir-neeche_phir-upar",
+
+    "_seerhi_matlab": [
+      "480 chuna aur 480 mojood hai      -> 480 utrega",
+      "480 chuna magar 480 nahi          -> 360 (neeche wali, chhoti file)",
+      "wo bhi nahi                       -> 720 (upar wali)",
+      "in mein se koi nahi               -> ruk kar poochhega: 'Ep 7 sirf 1080p mein hai — 1.34 GB. Karein?'"
+    ],
+
+    "seerhiyan": [360, 480, 720, 1080, 1440, 2160],
+
+    "poochhne_ki_hadd_mb": 700,
+    "_hadd_note": "Is se bari file par hamesha poochha jayega, chahe seerhi mein aa bhi jaye. 0 likhein to kabhi nahi poochhega."
+  },
+
+  "_aage_ke_liye": {
+    "_note": "Ye khane abhi khali hain. Zarurat pare to yahin bhar diye jayenge — exe ko haath lagaye baghair."
+  }
+}
