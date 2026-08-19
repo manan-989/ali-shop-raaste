@@ -1,0 +1,13 @@
+MEYCIQDDDOeDfYYGgemFY2kUKsZ/JkDMgdlm1By3W1FbSGIH+QIhALqg3j/zfzuAY2iFSLuoIjdTxTL19ET7XQPxKte+BUjM
+{
+  "V": 1,
+  "Issued": "2026-08-19 14:31",
+  "Keys": [
+    {
+      "H": "F7FEB7FC5D0D3A01B497F9D611DF9854",
+      "K": 1,
+      "M": "*",
+      "Exp": "2026-08-22"
+    }
+  ]
+}
