@@ -27,8 +27,8 @@
     "Baqi sab likhai samajhne ke liye hai — app unhein chhorh deti hai."
   ],
 
-  "version": 2,
-  "updated": "2026-08-10",
+  "version": 3,
+  "updated": "2026-11-21",
 
   "moviebox": {
     "_note": "Pehla pata jo chale, wohi le liya jayega. Naya pata SAB SE UPAR likhein.",
@@ -58,7 +58,8 @@
     },
 
     "siteHosts": [
-      "moviebox.ph"
+      "movieboxhd.net",
+      "themoviebox.xyz"
     ],
 
     "_siteHosts_note": "Title ka apna page aur link maangne wali call — dono isi pate par.",
@@ -104,6 +105,43 @@
 
     "poochhne_ki_hadd_mb": 700,
     "_hadd_note": "Is se bari file par hamesha poochha jayega, chahe seerhi mein aa bhi jaye. 0 likhein to kabhi nahi poochhega."
+  },
+
+  "prodl": {
+    "_note": [
+      "Pro and Premium DL safha. Ye poora khana ghair-zaroori hai — na ho to",
+      "app apne andar wale purane pate par chalti hai, MovieBox ka kuch nahi",
+      "chhoota.",
+      "",
+      "CNCVerse ka khud-intezaam: dukaandaar ne kaha 'customer ko sirf ali",
+      "toolkit do' aur 'original link daal do, update aye to auto ho jaye'.",
+      "App KHUD, pehli talash par, CNCVerse ki APNI GitHub release se bridge",
+      "utaar kar chala deti hai — customer kuch install nahi karta. Aur naya",
+      "version aate hi khud naya le aati hai (kuch karne ki zaroorat nahi).",
+      "",
+      "'cncRepo' = CNCVerse Bridge ki repo ('owner/repo'). App is ki 'latest",
+      "release' se .msi utaarti hai. Ye pehle se sahi bhari hai — chhedne ki",
+      "zaroorat sirf tab jab CNCVerse repo ka naam badal de.",
+      "",
+      "'cncBridgeUrl' = hangami override. Sirf tab bharein jab 'latest' wala",
+      "khud-kaar tareeqa na chale. Ye bhar dein to auto-update BAND ho jata hai",
+      "(version isi pate mein jam jata hai). Aam halat mein khali rakhein.",
+      "",
+      "'cncRepoUrl' = plugin (.cs3) ki fehrist — 'jo vidzee na de wo CNCVerse'.",
+      "Yahan se saare plugin utar kar bridge mein lag jate hain."
+    ],
+
+    "cncRepo": "NivinCNC/CNCVerse-Bridge",
+    "cncBridgeUrl": "",
+    "cncRepoUrl": "https://raw.githubusercontent.com/phisher98/cloudstream-extensions-phisher/refs/heads/builds/repo.json",
+
+    "_cncHindiOnly_note": [
+      "true  = CNCVerse ke nateejon mein sirf Hindi providers (dukaan Hindi",
+      "        bechti hai; Turkish/German/Chinese sirf shor aur Cloudflare ki",
+      "        bekaar khirkiyan). Ye default hai.",
+      "false = sab zaban wapas."
+    ],
+    "cncHindiOnly": true
   },
 
   "_aage_ke_liye": {
